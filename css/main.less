@@ -1,0 +1,546 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header,  menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+  CSS proyecto
+ */
+// fonts
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url("../fonts/Lato/Lato-Bold.ttf") format('TrueType');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url("../fonts/Lato/Lato-Bold.ttf") format('TrueType');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url("../fonts/Open_Sans/OpenSans-Regular.ttf") format('TrueType');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url("../fonts/Open_Sans/OpenSans-Regular.ttf") format('TrueType');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/Iconmoon/IcoMoon-Free.ttf?f5k529') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+// icons
+.icon-number1:before {
+  color:@color_1;
+  margin-right: 10px;
+  content: "\e900";
+}
+.icon-number2:before {
+  color:@color_1;
+  margin-right: 10px;
+  content: "\e902";
+}
+.icon-number3:before {
+  color:@color_1;
+  margin-right: 10px;
+  content: "\e901";
+}
+.icon-number4:before {
+  color:@color_1;
+  margin-right: 10px;
+  content: "\e903";
+}
+.icon-number1b:before {
+  color:@color_1;
+  margin-right: 10px;
+  content: "\e904";
+}
+.icon-number2b:before {
+  color:@color_1;
+  margin-right: 10px;
+  content: "\e905";
+}
+.icon-number3b:before {
+  color:@color_1;
+  margin-right: 10px;
+  content: "\e906";
+}
+.icon-number4b:before {
+  color:@color_1;
+  margin-right: 10px;
+  content: "\e907";
+}
+.icon-menu:before {
+  content: "\e952";
+  color: @color_4;
+}
+.icon-calendar:before {
+  content: "\e953";
+  color: @color_1;
+}
+.icon-arrow-up2:before {
+  font-size: 0.75rem;
+  content: "\ea3a";
+  color: #5cb85c;
+
+}
+.icon-arrow-down2:before {
+  font-size: 0.75rem;
+  content: "\ea3e";
+  color: #a94442;
+}
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// variables
+@title_font : Lato,Arial Black,Tahoma;
+@title_size_1 : 2rem;
+@title_size_2 : 1.5rem;
+@title_size_3 : 1.2rem;
+@title_size_4 : 1.1rem;
+@title_size_5 : 0.8rem;
+@paragraph_font : Open-Sans, Georgia, Serif;
+@paragraph_size : 1rem;
+@color_4 :#e7e8f5;
+@color_3 :#70a3c4;
+@color_2 :#1f6cb0;
+@color_1 :#4e4e6a;
+@transition_time_1:0.5s;
+@transition_time_2:0.8s;
+@transition_time_3:0.1s;
+@color_white :#fbfbfb;
+@color_black :#0f0f0f;
+@header_height : 150px;
+@default_margin : 10px;
+@default_padding : 20px;
+@tablets: ~"screen and (min-width: 640px)";
+@desktops: ~"screen and (min-width: 1024px)";
+*{
+  box-sizing: border-box;
+}
+.struct{
+  display: none;
+}
+body{
+  font-family: @title_font;
+  background-color: @color_4;
+  h1{
+    font-size: @title_size_2;
+    font-family: @title_font;
+    margin:10px 0 10px;
+  }
+  h2{
+    font-size: @title_size_3;
+    font-family: @title_font;
+    margin:10px 0 10px;
+  }
+}
+#jugador_contenedor{
+  width:100%;
+  text-align: center;
+  table{
+    text-align: center;
+    margin: 0 auto 0 auto;
+    width: 200px;
+  }
+  aside{
+    position:relative;
+  }
+
+}
+#bt_menu{
+  display: block;
+}
+#bt_eventos, #bt_clasificacion, #bt_patines {
+  display: none;
+}
+table{
+  margin: 0 0 20px;
+  width:100%;
+  th{
+    text-align:  center;
+    padding: 10px;
+    font-family: @title_font;
+    font-size: @title_size_4;
+    background-color: @color_3;
+    color: @color_white;
+
+  }
+  td{
+    border-left: solid 1px #eeeeee;
+    border-right: solid 1px #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    padding:20px 10px;
+  }
+  tr{
+    text-align: center;
+    font-size: @title_size_4;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2
+  }
+}
+select {
+  background: transparent;
+  border: none;
+  color:@color_1;
+  border-bottom: solid 2px @color_1;
+  font-size: @title_size_3;
+  font-family: @title_font;
+  line-height: 20px;
+  width: 100px;
+}
+#main_header{
+  background-image: url("../images/header_bg.jpg");
+  background-size:cover;
+  background-position: center;
+  background-color: @color_1;
+  height: @header_height;
+  padding:@default_padding;
+  margin: @default_margin;
+  border: solid 10px @color_3;
+
+  color: @color_white;
+  text-align: left;
+  alignment-baseline: text-top;
+  line-height: 1.3rem;
+
+  h1{
+    position : absolute;
+    font-weight: 700;
+    color: @color_3;
+    text-transform: uppercase;
+    span{
+      font-family: @paragraph_font;
+      font-weight: 400;
+      color: @color_4;
+      text-transform: capitalize;
+    }
+  }
+
+}
+nav{
+  ul {
+    list-style-type: none;
+    //padding: @default_padding;
+    margin: @default_margin;
+    li {
+      background-color: @color_3;
+      a {
+        text-transform: capitalize;
+        color: @color_black;
+        display: block;
+        text-align: left;
+        padding: 8px 8px 8px 16px;
+        margin: 4px 0 4px 0;
+        text-decoration: none;
+      }
+
+      a[aria-selected="true"], a:hover,a:focus,.active{
+        color: @color_4;
+        background-color: @color_2;
+      }
+    }
+  }
+}
+#main_nav{
+  z-index: 10;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  //overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  background-color: @color_4;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+#main_header {
+  margin-top: 50px;
+}
+section {
+  font-family: @paragraph_font;
+  font-size: @title_size_4;
+  font-family: @paragraph_font;
+  margin: @default_margin;
+  article{
+    padding: @default_padding;
+    background-color: @color_white;
+  }
+  article article{
+    padding: 0 0 20px 0;
+
+  }
+  h1,h2{
+    padding: @default_padding;
+    margin:0;
+    background-color: @color_3;
+    font-family: @title_font;
+    font-size: @title_size_2;
+  }
+  h3{
+    padding: 20px 0 15px 0;
+    margin:0;
+    font-family: @title_font;
+    font-size: @title_size_3;
+    color: @color_1;
+    background-color: @color_white;
+  }
+  ~#clasificacion{
+    nav{
+      width: 100%;
+      background-color: @color_3;
+    }
+    h2{
+      padding: @default_padding;
+      margin: 0;
+      border-left: solid @color_3 2px;
+      border-right: solid @color_3 2px;
+      border-bottom: solid @color_3 2px;
+      font-family: @title_font;
+      font-size: @title_size_3;
+      color: @color_1;
+      background-color: @color_white;
+    }
+
+    nav, nav ul{
+        padding: 0;
+        margin:0;
+    }
+    li{
+      display: inline-block;
+    }
+    a{
+
+      border-left: solid @color_3 2px;
+      border-top: solid @color_3 2px;
+      margin: 0;
+      text-align: center;
+      font-family: @title_font;
+      font-size: @title_size_4;
+    }
+    a:hover,a:focus,.active{
+
+      background-color: @color_white;
+      color: @color_black;
+    }
+  }
+}
+#view_patines{
+  background-color: @color_white;
+  nav{
+    margin: 0;
+  }
+}
+#view_patines_resumen{
+  display: block;
+  text-align: center;
+  img{
+    margin: @default_margin;
+  }
+  h1, h2 {
+    text-align: left;
+    background-color: @color_white;
+  }
+}
+#view_patines_resultado{
+  display: none;
+}
+#view_patines_plantilla {
+  display: none;
+  table tr {
+    th {
+      font-family: @title_font;
+      font-size: @title_size_3;
+    }
+    td {
+      font-family: @title_font;
+      font-size: @title_size_4;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+#competicion_header{
+  display: inline-block;
+  font-size: @title_size_4;
+  margin-bottom: 20px;
+  h2{
+    width:100%;
+    display: inline-block;
+    padding: 10px;
+    background-color: @color_white;
+  }
+
+  table, article{
+    display: none;
+  }
+}
+footer{
+  text-align: right;
+  background-color: @color_3;
+  padding: @default_padding;
+  margin: @default_margin;
+}
+
+@media @tablets {
+  // oculto la botonera para movil
+  #bt_menu{
+    display: none;
+  }
+
+  #bt_eventos, #bt_clasificacion, #bt_patines {
+    display: block;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  #main_header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+  #main_nav{
+    width: 22%;
+    //float: left;
+    position: fixed;
+    top:@header_height+10;
+  }
+  #eventos{
+    margin-top: @header_height+20;
+  }
+  section{
+    width: 74%;
+    float: right;
+  }
+  footer{
+    display: none;
+  }
+  #nav_patines{
+    background-color: @color_3;
+    li {
+      display: inline-block;
+    }
+  }
+}
+@media @desktops {
+  #bt_menu{
+    display: none;
+  }
+  #bt_eventos, #bt_clasificacion, #bt_patines {
+    display: block;
+  }
+
+  #main_header {
+    position: relative;
+    margin-top: 0;
+  }
+
+  #main_nav{
+    position: relative;
+    width:100%;
+    margin-top: 0;
+    background-color: @color_3;
+  }
+  #eventos, #clasificacion{
+    margin-top: 70px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  section{
+    height: auto;
+  }
+  nav{
+    font-size: @title_size_3;
+    background-color: @color_3;
+    width:100%;
+    float: left;
+    margin: 0 10px 0 10px;
+    li {
+      display: inline-block;
+    }
+  }
+  #eventos{
+    width: 60%;
+    float: left;
+  }
+  #clasificacion{
+    width: 36%;
+    float: right;
+  }
+
+  footer{
+    display: none;
+  }
+  #patines{
+    width: 100%;
+    float: left;
+  }
+}

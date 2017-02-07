@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=">Federación Gallega de Patinaje, Portal de Competiciones">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Federación Gallega de Patinaje :: Competiciones</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body onresize="resizeListener()">
+    <nav id="main_nav" role="navigation">
+        <ul role="menubar">
+            <li role="presentation"><a role="menuitem" href="javascript:changeMenuState()" id="bt_menu" class="icon-menu" title="Menu"></a></li>
+            <li role="presentation"><a role="menuitem" href="#eventos" id="bt_eventos" title="Proximos Eventos">Proximos Eventos</a></li>
+            <li role="presentation"><a role="menuitem" href="#clasificacion" id="bt_clasificacion" title="Resultados">Resultados</a></li>
+            <li role="presentation"><a role="menuitem" href="#patines" id="bt_patines" title="Competiciones Hockey Patines">Hockey linea</a></li>
+        </ul>
+    </nav>
+    <header id="main_header" role="BANNER">
+        <h1>Federación gallega de patinaje<br><span>competiciones</span></h1>
+    </header>
+    <main role="MAIN">
+        <section id="eventos" title="Próximos eventos" role="region"><h2 title="Titulo seccion Proximos Eventos" class="struct"><a href="eventos.html" target="_self">Proximos eventos</a></h2></section>
+        <section id="clasificacion" title="Clasificación" role="region"><h2 title="Titulo seccion Clasificacion" class="struct"><a href="clasificacion.html" target="_self">Clasificacion</a></h2></section>
+        <section id="patines" title="Competiciones Hockey patines" role="region"><h2 title="Titulo seccion Competiciones Hockey patines" class="struct"><a href="patines.html" target="_self">Competiciones Hockey patines</a></h2></section>
+    </main>
+    <footer role="CONTENTINFO">texto footer</footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

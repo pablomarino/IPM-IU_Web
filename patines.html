@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+</head>
+<body>
+<h1 title="Titulo seccion Hockey linea" role="heading">Hockey Linea</h1>
+<!-- combobox ligas -->
+    <article id="view_patines" title="Seccion Liga patines">
+        <header id="competicion_header" title="selector de liga y equipo">
+            <h2><span class="icon-number1b"></span>Liga
+                <select title="selector de liga">
+                    <option>Senior</option>
+                    <option>Junior</option>
+                    <option>Infantil</option>
+                </select>
+                2016/2017
+            </h2>
+            <h2>
+                <span class="icon-number2b"></span>Equipo
+                <select id="patines_equipo" onchange="updatePatinesContenido()" title="selector de equipo">
+                    <option>H.C. Compostela</option>
+                    <option>Compañia de maria A</option>
+                    <option>Compañia de maria B</option>
+                    <option>H.C. Traviesas</option>
+                </select>
+            </h2>
+        </header>
+        <nav id="nav_patines" title="navegacion conpeticion liga patines" role="complementary">
+            <ul role="menubar">
+                <li role="presentation"><a role="menuitem" aria-selected="true" href="javascript:patines_switch(0)" id="nombre_equipo">H.C. Compostela</a></li>
+                <li role="presentation"><a role="menuitem" aria-selected="false" href="javascript:patines_switch(1)">Resultados</a></li>
+                <li role="presentation"><a role="menuitem" aria-selected="false" href="javascript:patines_switch(2)">Plantilla</a></li>
+            </ul>
+        </nav>
+        <article id="view_patines_resumen" role="article">
+            <img src="images/escudo.png" width="300px" height="300px" alt="escudo del equipo" title="escudo">
+            <h2>Integer scelerisque, lectus vitae pretium</h2>
+            <h3>Feugiat, nunc erat suscipit enim, sit amet luctus libero libero id ipsum. Sed vel tortor velit. Suspendisse et placerat elit. Vestibulum quis sollicitudin diam. Vivamus tempus faucibus lacus, in fringilla purus sollicitudin eget. Donec nec porta magna, sit amet ornare neque. Nunc sed facilisis nisl. Donec quis ipsum non nunc tempus tristique. Cras mattis ultricies odio vitae semper. Vestibulum a massa risus. Nulla tortor lectus, pharetra vel sollicitudin sed, scelerisque sit amet metus. Nam vel dapibus nunc, ut faucibus odio. Suspendisse imperdiet purus et sem scelerisque, nec ultricies diam aliquet. Maecenas pulvinar dolor id diam interdum ornare.</h3>
+        </article>
+        <article id="view_patines_resultado" role="article">
+            <table id="Resultados">
+                <tr>
+                    <th>Local</th>
+                    <th>Resultado</th>
+                    <th>Visitante</th>
+                </tr>
+                <tr>
+                    <td>H.C. Compostela</td>
+                    <td>1-1</td>
+                    <td>Compañia de maria A</td>
+                </tr>
+                <tr>
+                    <td>Compañia de maria A</td>
+                    <td>3-1</td>
+                    <td>Compañia de maria B</td>
+                </tr>
+                <tr>
+                    <td>Compañia de maria B</td>
+                    <td>0-0</td>
+                    <td>H.C. Traviesas</td>
+                </tr>
+                <tr>
+                    <td>H.C. Traviesas</td>
+                    <td>1-2</td>
+                    <td>H.C. Compostela</td>
+                </tr>
+            </table>
+        </article>
+
+        <article id="view_patines_plantilla" role="article">
+            <table title="Estadisticas de Jugadores">
+                <tr>
+                    <th title="Nombre">Nombre</th>
+                    <th title="Goles">Gol</th>
+                    <th title="Partidos Jugados">PJ</th>
+                    <th title="Goles por partido">GPP</th>
+                    <th title="Asistencias">A</th>
+                    <th title="Penaltis recibidos">PR</th>
+                    <th title="Penaltis transformados">PT</th>
+                    <th title="Tarjetas Azules">TA</th>
+                    <th title="Tarjetas Azules por partido">TAPP</th>
+                    <th title="Tarjetas Rojas">TR</th>
+                    <th title="Tarjetas Rojas por partido">TRPP</th>
+                </tr>
+
+                <tr>
+                    <td><a href="jugador.html" target="_self">LOPEZ PEREZ ALAN</a></td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>1.1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>6</td>
+                </tr>
+
+                <tr>
+                    <td><a href="jugador.html" target="_self">MARTINEZ FRANQUEIRA FRANCISCO</a></td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>1.1</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td><a href="jugador.html" target="_self">RODRIGUEZ GARCIA FERNANDO</a></td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0.3</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td><a href="jugador.html" target="_self">DEL RIO JUNCAL DANIEL</a></td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>7</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td><a href="jugador.html" target="_self">ROCA BOUZA ALEJANDRO</a></td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td><a href="jugador.html" target="_self">LOPEZ GARCIA MIGUEL</a></td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td><a href="jugador.html" target="_self">NIETO SIEIRA ZANDI</a></td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+
+                    <td><a href="jugador.html" target="_self">PARGA FERNANDEZ PABLO</a></td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td><a href="jugador.html" target="_self">SOTO RODRIGUEZ ALEJANDRO</a></td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td><a href="jugador.html" target="_self">VIDAL AMOR MANUEL</a></td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </table>
+
+        </article>
+    </article>
+</body>
+</html>

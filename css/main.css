@@ -1,0 +1,588 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+  CSS proyecto
+ */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url("../fonts/Lato/Lato-Bold.ttf") format('TrueType');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url("../fonts/Lato/Lato-Bold.ttf") format('TrueType');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url("../fonts/Open_Sans/OpenSans-Regular.ttf") format('TrueType');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url("../fonts/Open_Sans/OpenSans-Regular.ttf") format('TrueType');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/Iconmoon/IcoMoon-Free.ttf?f5k529') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-number1:before {
+  color: #4e4e6a;
+  margin-right: 10px;
+  content: "\e900";
+}
+.icon-number2:before {
+  color: #4e4e6a;
+  margin-right: 10px;
+  content: "\e902";
+}
+.icon-number3:before {
+  color: #4e4e6a;
+  margin-right: 10px;
+  content: "\e901";
+}
+.icon-number4:before {
+  color: #4e4e6a;
+  margin-right: 10px;
+  content: "\e903";
+}
+.icon-number1b:before {
+  color: #4e4e6a;
+  margin-right: 10px;
+  content: "\e904";
+}
+.icon-number2b:before {
+  color: #4e4e6a;
+  margin-right: 10px;
+  content: "\e905";
+}
+.icon-number3b:before {
+  color: #4e4e6a;
+  margin-right: 10px;
+  content: "\e906";
+}
+.icon-number4b:before {
+  color: #4e4e6a;
+  margin-right: 10px;
+  content: "\e907";
+}
+.icon-menu:before {
+  content: "\e952";
+  color: #e7e8f5;
+}
+.icon-calendar:before {
+  content: "\e953";
+  color: #4e4e6a;
+}
+.icon-arrow-up2:before {
+  font-size: 0.75rem;
+  content: "\ea3a";
+  color: #5cb85c;
+}
+.icon-arrow-down2:before {
+  font-size: 0.75rem;
+  content: "\ea3e";
+  color: #a94442;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  box-sizing: border-box;
+}
+.struct {
+  display: none;
+}
+body {
+  font-family: Lato, Arial Black, Tahoma;
+  background-color: #e7e8f5;
+}
+body h1 {
+  font-size: 1.5rem;
+  font-family: Lato, Arial Black, Tahoma;
+  margin: 10px 0 10px;
+}
+body h2 {
+  font-size: 1.2rem;
+  font-family: Lato, Arial Black, Tahoma;
+  margin: 10px 0 10px;
+}
+#jugador_contenedor {
+  width: 100%;
+  text-align: center;
+}
+#jugador_contenedor table {
+  text-align: center;
+  margin: 0 auto 0 auto;
+  width: 200px;
+}
+#jugador_contenedor aside {
+  position: relative;
+}
+#bt_menu {
+  display: block;
+}
+#bt_eventos,
+#bt_clasificacion,
+#bt_patines {
+  display: none;
+}
+table {
+  margin: 0 0 20px;
+  width: 100%;
+}
+table th {
+  text-align: center;
+  padding: 10px;
+  font-family: Lato, Arial Black, Tahoma;
+  font-size: 1.1rem;
+  background-color: #70a3c4;
+  color: #fbfbfb;
+}
+table td {
+  border-left: solid 1px #eeeeee;
+  border-right: solid 1px #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding: 20px 10px;
+}
+table tr {
+  text-align: center;
+  font-size: 1.1rem;
+}
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+select {
+  background: transparent;
+  border: none;
+  color: #4e4e6a;
+  border-bottom: solid 2px #4e4e6a;
+  font-size: 1.2rem;
+  font-family: Lato, Arial Black, Tahoma;
+  line-height: 20px;
+  width: 100px;
+}
+#main_header {
+  background-image: url("../images/header_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: #4e4e6a;
+  height: 150px;
+  padding: 20px;
+  margin: 10px;
+  border: solid 10px #70a3c4;
+  color: #fbfbfb;
+  text-align: left;
+  alignment-baseline: text-top;
+  line-height: 1.3rem;
+}
+#main_header h1 {
+  position: absolute;
+  font-weight: 700;
+  color: #70a3c4;
+  text-transform: uppercase;
+}
+#main_header h1 span {
+  font-family: Open-Sans, Georgia, Serif;
+  font-weight: 400;
+  color: #e7e8f5;
+  text-transform: capitalize;
+}
+nav ul {
+  list-style-type: none;
+  margin: 10px;
+}
+nav ul li {
+  background-color: #70a3c4;
+}
+nav ul li a {
+  text-transform: capitalize;
+  color: #0f0f0f;
+  display: block;
+  text-align: left;
+  padding: 8px 8px 8px 16px;
+  margin: 4px 0 4px 0;
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li .active {
+  color: #e7e8f5;
+  background-color: #1f6cb0;
+}
+#main_nav {
+  z-index: 10;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  /* Set the navbar to fixed position */
+  background-color: #e7e8f5;
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  /* Full width */
+}
+#main_header {
+  margin-top: 50px;
+}
+section {
+  font-size: 1.1rem;
+  font-family: Open-Sans, Georgia, Serif;
+  margin: 10px;
+}
+section article {
+  padding: 20px;
+  background-color: #fbfbfb;
+}
+section article article {
+  padding: 0 0 20px 0;
+}
+section h1,
+section h2 {
+  padding: 20px;
+  margin: 0;
+  background-color: #70a3c4;
+  font-family: Lato, Arial Black, Tahoma;
+  font-size: 1.5rem;
+}
+section h3 {
+  padding: 20px 0 15px 0;
+  margin: 0;
+  font-family: Lato, Arial Black, Tahoma;
+  font-size: 1.2rem;
+  color: #4e4e6a;
+  background-color: #fbfbfb;
+}
+section ~ #clasificacion nav {
+  width: 100%;
+  background-color: #70a3c4;
+}
+section ~ #clasificacion h2 {
+  padding: 20px;
+  margin: 0;
+  border-left: solid #70a3c4 2px;
+  border-right: solid #70a3c4 2px;
+  border-bottom: solid #70a3c4 2px;
+  font-family: Lato, Arial Black, Tahoma;
+  font-size: 1.2rem;
+  color: #4e4e6a;
+  background-color: #fbfbfb;
+}
+section ~ #clasificacion nav,
+section ~ #clasificacion nav ul {
+  padding: 0;
+  margin: 0;
+}
+section ~ #clasificacion li {
+  display: inline-block;
+}
+section ~ #clasificacion a {
+  border-left: solid #70a3c4 2px;
+  border-top: solid #70a3c4 2px;
+  margin: 0;
+  text-align: center;
+  font-family: Lato, Arial Black, Tahoma;
+  font-size: 1.1rem;
+}
+section ~ #clasificacion a:hover,
+section ~ #clasificacion a:focus,
+section ~ #clasificacion .active {
+  background-color: #fbfbfb;
+  color: #0f0f0f;
+}
+#view_patines {
+  background-color: #fbfbfb;
+}
+#view_patines nav {
+  margin: 0;
+}
+#view_patines_resumen {
+  display: block;
+  text-align: center;
+}
+#view_patines_resumen img {
+  margin: 10px;
+}
+#view_patines_resumen h1,
+#view_patines_resumen h2 {
+  text-align: left;
+  background-color: #fbfbfb;
+}
+#view_patines_resultado {
+  display: none;
+}
+#view_patines_plantilla {
+  display: none;
+}
+#view_patines_plantilla table tr th {
+  font-family: Lato, Arial Black, Tahoma;
+  font-size: 1.2rem;
+}
+#view_patines_plantilla table tr td {
+  font-family: Lato, Arial Black, Tahoma;
+  font-size: 1.1rem;
+}
+#view_patines_plantilla table tr td a {
+  text-decoration: none;
+}
+#competicion_header {
+  display: inline-block;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+#competicion_header h2 {
+  width: 100%;
+  display: inline-block;
+  padding: 10px;
+  background-color: #fbfbfb;
+}
+#competicion_header table,
+#competicion_header article {
+  display: none;
+}
+footer {
+  text-align: right;
+  background-color: #70a3c4;
+  padding: 20px;
+  margin: 10px;
+}
+@media screen and (min-width: 640px) {
+  #bt_menu {
+    display: none;
+  }
+  #bt_eventos,
+  #bt_clasificacion,
+  #bt_patines {
+    display: block;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  #main_header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+  #main_nav {
+    width: 22%;
+    position: fixed;
+    top: 160px;
+  }
+  #eventos {
+    margin-top: 170px;
+  }
+  section {
+    width: 74%;
+    float: right;
+  }
+  footer {
+    display: none;
+  }
+  #nav_patines {
+    background-color: #70a3c4;
+  }
+  #nav_patines li {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #bt_menu {
+    display: none;
+  }
+  #bt_eventos,
+  #bt_clasificacion,
+  #bt_patines {
+    display: block;
+  }
+  #main_header {
+    position: relative;
+    margin-top: 0;
+  }
+  #main_nav {
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    background-color: #70a3c4;
+  }
+  #eventos,
+  #clasificacion {
+    margin-top: 70px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  section {
+    height: auto;
+  }
+  nav {
+    font-size: 1.2rem;
+    background-color: #70a3c4;
+    width: 100%;
+    float: left;
+    margin: 0 10px 0 10px;
+  }
+  nav li {
+    display: inline-block;
+  }
+  #eventos {
+    width: 60%;
+    float: left;
+  }
+  #clasificacion {
+    width: 36%;
+    float: right;
+  }
+  footer {
+    display: none;
+  }
+  #patines {
+    width: 100%;
+    float: left;
+  }
+}
